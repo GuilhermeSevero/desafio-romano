@@ -1,8 +1,10 @@
-
-NUMERALS = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+from .to_decimal import _map_representation, _values_for_each_letter
 
 
 def to_decimal(r: str) -> int:
     """ Return a Decimal Number by a Roman Number 'r' """
-    values = [NUMERALS[i] for i in r.upper()]
-    return sum([i if i >= values[min(j + 1, len(values) - 1)] else -i for j, i in enumerate(values)])
+    if type(r) is not str:
+        raise TypeError(f'Expect string, got {type(r)}')
+
+    values = _values_for_each_letter(r)
+    return sum(_map_representation(values))

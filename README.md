@@ -50,8 +50,7 @@ $ python -m unittest discover -s ./tests/
 
 ## Implementação Futura
 
-Como o foco da implementação é a simplicidade, não foi realizada validação para identificar se o numeral romano 
-passado para conversão. <br>
+Como o foco da implementação é a simplicidade, não foi realizada validação para o numeral romano passado para conversão. <br>
 ###### Ex.: Se for passado um valor de `CMXCVVIIII`, a função `to_decimal` irá converter com sucesso para `1004`.
 
 Dessa forma, as funções estão abertas para a implementação de validação dos valores. 

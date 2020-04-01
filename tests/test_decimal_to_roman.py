@@ -35,11 +35,10 @@ class TestDecimalToRoman(unittest.TestCase):
         for decimal, roman in self.test_cases:
             self.assertEqual(to_roman(decimal), roman, f'{decimal} convert to {roman}')
 
-    def test_type_error(self):
+    def test_type_error_int(self):
         with self.assertRaises(TypeError):
             to_roman('1')
+
+    def test_type_error_list(self):
+        with self.assertRaises(TypeError):
             to_roman([1, 92])
-
-
-if __name__ == '__main__':
-    unittest.main()

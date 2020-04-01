@@ -1,5 +1,5 @@
-from .to_decimal import _map_representation, _values_for_each_letter
-from .to_roman import _calc_letters
+
+from .utils import _map_representation, _values_for_each_letter, _calc_letters
 
 
 def to_decimal(r: str) -> int:

@@ -10,4 +10,4 @@ def _values_for_each_letter(r: str) -> list:
 
 def _map_representation(r: list) -> list:
     """ Map values to add or subtract """
-    return [i if i >= r[min(j + 1, len(r) - 1)] else -i for j, i in enumerate(r)]
+    return [value if value >= r[min(index + 1, len(r) - 1)] else -value for index, value in enumerate(r)]

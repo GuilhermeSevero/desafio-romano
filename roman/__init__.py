@@ -4,6 +4,7 @@ from .to_roman import _calc_letters
 
 def to_decimal(r: str) -> int:
     """ Return a Decimal Number by a Roman Number 'r' """
+
     if type(r) is not str:
         raise TypeError(f'Expect string, got {type(r)}')
 
@@ -13,5 +14,9 @@ def to_decimal(r: str) -> int:
 
 def to_roman(d: int) -> str:
     """ Return a Roman Number by a Decimal Number 'd' """
+
+    if type(d) is not int:
+        raise TypeError(f'Expect integer, got {type(d)}')
+
     romans = _calc_letters(d)
     return ''.join([letter * count for letter, count in romans.items()])

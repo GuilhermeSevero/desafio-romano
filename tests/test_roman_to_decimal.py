@@ -35,7 +35,7 @@ class TestRomanToDecimal(unittest.TestCase):
         for decimal, roman in self.test_cases:
             self.assertEqual(to_decimal(roman), decimal, f'{roman} convert to {decimal}')
 
-    def test_type_error_int(self):
+    def test_type_error(self):
         with self.assertRaises(TypeError):
             to_decimal(1)
             to_decimal(['I', 'XIV'])

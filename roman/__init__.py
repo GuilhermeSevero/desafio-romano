@@ -10,6 +10,16 @@ def to_decimal(r: str) -> int:
     return sum(_map_representation(values))
 
 
+NUMERALS = {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5,
+            'IV': 4, 'I': 1}
+
+
 def to_roman(d: int) -> str:
     """ Return a Roman Number by a Decimal Number 'd' """
-    pass
+    roman = []
+    for key, value in NUMERALS.items():
+        count = int(d / value)
+        if count:
+            roman.append(key * count)
+            d -= value * count
+    return ''.join(roman)

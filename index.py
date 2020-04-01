@@ -4,9 +4,10 @@
         Decimal -> Romano
 """
 
-from roman import to_decimal
+from roman import to_decimal, to_roman
 
-NUMEROS = (
+
+NUMBERS = (
     (1, 'I'),
     (2, 'II'),
     (4, 'IV'),
@@ -22,8 +23,24 @@ NUMEROS = (
     (483, 'CDLXXXIII')
 )
 
-if __name__ == '__main__':
-    for decimal, romano in NUMEROS:
-        converted = to_decimal(romano)
 
-        print(f'{romano} => {converted}')
+def _print_roman_to_decimal():
+    print('--- Romano para Decimal ---')
+    for decimal, roman in NUMBERS:
+        converted = to_decimal(roman)
+
+        print(f'{roman} => {converted}')
+
+
+def _print_decimal_to_roman():
+    print('--- Decimal para Romano ---')
+    for decimal, roman in NUMBERS:
+        converted = to_roman(decimal)
+
+        print(f'{decimal} => {converted}')
+
+
+if __name__ == '__main__':
+    _print_roman_to_decimal()
+    print('\n')
+    _print_decimal_to_roman()

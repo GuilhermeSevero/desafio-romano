@@ -5,7 +5,9 @@ Algoritmo de Conversão de Números Romanos
 ## Detalhes de Implementação
 
 Realizada implementação orientada à funcionalidade. Pensando na possibilidade em extrair o pacote para um repositorio 
-privado/publico (Ex.: https://pypi.org/).
+privado/publico (Ex.: https://pypi.org/). <br>
+Não achei necessário usar OOP, pois não faz sentido criar um objeto, visto não há a necessidade de guardar qualquer estado nas conversões. 
+
 
 ---
 

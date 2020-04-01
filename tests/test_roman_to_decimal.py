@@ -59,6 +59,14 @@ class TestRomanToDecimal(unittest.TestCase):
     def test_convert_to_504(self):
         self.assertEqual(to_decimal('DIV'), 504, 'Convert To 504')
 
+    def test_type_error_int(self):
+        with self.assertRaises(TypeError):
+            to_decimal(1)
+
+    def test_type_error_list(self):
+        with self.assertRaises(TypeError):
+            to_decimal(['I', 'XIV'])
+
 
 if __name__ == '__main__':
     unittest.main()

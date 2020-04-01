@@ -12,7 +12,7 @@ Não achei necessário usar OOP, pois não faz sentido criar um objeto, visto n�
 ---
 
 ## Exemplo de Uso
-###### Implementado alguns exemplos de uso.  (Disponível em: `./index.py`)
+###### Obs.: Implementado alguns exemplos de uso.  (Disponível em: `./index.py`)
 
 **Romano para Decimal:**
 
@@ -45,3 +45,13 @@ print(decimal)
 ```bash
 $ python -m unittest discover -s ./tests/
 ```
+
+---
+
+## Implementação Futura
+
+Como o foco da implementação é a simplicidade, não foi realizada validação para identificar se o numeral romano 
+passado para conversão. <br>
+###### Ex.: Se for passado um valor de `CMXCVVIIII`, a função `to_decimal` irá converter com sucesso para `1004`.
+
+Dessa forma, as funções estão abertas para a implementação de validação dos valores. 

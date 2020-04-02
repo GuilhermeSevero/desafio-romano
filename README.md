@@ -34,7 +34,7 @@ from roman import to_roman
 decimal = 138
 romano = to_roman(decimal)
 
-print(decimal)
+print(romano)
 
 ```
 
